@@ -33,17 +33,15 @@
     <img id="julia" src="">
   </div>
 
-  <script>
-    const base = "https://mandelbrot-backend.onrender.com"; // Fill in with your backend URL, e.g. https://mandelbrot-backend.onrender.com
+<script>
+  const base = "https://mandelbrot-backend.onrender.com"; // or your Render URL
 
-    function generate() {
-      const c = document.getElementById('c').value;
-      if (!c) return alert('Enter a complex number!');
-
-      document.getElementById('mandelbrot').src = `${base}/mandelbrot?c=${encodeURIComponent(c)}`;
-      document.getElementById('julia').src = `${base}/julia?c=${encodeURIComponent(c)}`;
-      document.getElementById('results').style.display = 'block';
-    }
-  </script>
+  function generate() {
+    const c = encodeURIComponent(document.getElementById('c').value);
+    document.getElementById('mandelbrot').src = `${base}/mandelbrot?c=${c}`;
+    document.getElementById('julia').src = `${base}/julia?c=${c}`;
+    document.getElementById('results').style.display = 'block';
+  }
+</script>
 </body>
 </html>
