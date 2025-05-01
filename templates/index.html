@@ -23,15 +23,12 @@
 </head>
 <body>
   <h1>Mandelbrot & Julia Set Viewer</h1>
+  <h3>Enter complex number (e.g., 0.355+0.355j)</h3>
   <input id="c" placeholder="Enter complex number (e.g., 0.355+0.355j)">
   <button onclick="generate()">Generate</button>
 
   <div id="results" style="display:none;">
-    <h2>Mandelbrot Set</h2>
     <img id="mandelbrot" src="">
-    <h2>Julia Set</h2>
-    <img id="julia" src="">
-  </div>
 
 <script>
   const base = "https://mandelbrot-backend.onrender.com"; // or your Render URL
