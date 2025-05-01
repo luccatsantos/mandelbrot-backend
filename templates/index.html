@@ -34,12 +34,11 @@
 <script>
   const base = "https://mandelbrot-backend.onrender.com"; // or your Render URL
 
-  function generate() {
-    const c = encodeURIComponent(document.getElementById('c').value);
-    document.getElementById('mandelbrot').src = `${base}/mandelbrot?c=${c}`;
-    document.getElementById('julia').src = `${base}/julia?c=${c}`;
-    document.getElementById('results').style.display = 'block';
-  }
+function generate() {
+  const c = encodeURIComponent(document.getElementById('c').value);
+  document.getElementById('mandelbrot').src = `${base}/mandelbrot?c=${c}`;
+  document.getElementById('results').style.display = 'block';
+}
 </script>
 </body>
 </html>
